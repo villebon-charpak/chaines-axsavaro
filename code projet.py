@@ -122,21 +122,22 @@ if I in reponse_positive:
      fin = datetime.date(a,b,c)
      if fin <= début:
          print("problème, veuillez ressaisir les informations")
+     else:    
+    
+      print("combien de fois devez-vous prendre votre traitement au cours de la journée ?")
+      frequence = int(input())
 
-     print("combien de fois devez-vous prendre votre traitement au cours de la journée ?")
-     frequence = int(input())
-
-     if frequence == 0 :
-         print ("problème, veuillez ressaisir les informations")
+      if frequence == 0 :
+          print ("problème, veuillez ressaisir les informations, votre date de fin est située avant votre date de départ")
          
-     print("voulez-vous saisir un nouveau traitement ?")
-     renouv = input()
-     if renouv in reponse_positive:
-         G += 1
-     if renouv in reponse_negative:
-         G = 0
-     else:
-         print("opération inconnue, veuillez recommencer")
+      print("voulez-vous saisir un nouveau traitement ?")
+      renouv = input()
+      if renouv in reponse_positive:
+          G += 1
+      if renouv in reponse_negative:
+          G = 0
+      else:
+          print("opération inconnue, veuillez recommencer")
          
          
 else:

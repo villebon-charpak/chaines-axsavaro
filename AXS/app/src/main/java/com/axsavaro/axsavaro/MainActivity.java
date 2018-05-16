@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView compte;
+    private ImageView valise;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +27,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-}
+
+        this.valise = (ImageView) findViewById(R.id.valise);
+
+        valise.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View view) {
+                                          Intent actvalise = new Intent(getApplicationContext(), Main3Activity.class);
+                                          startActivity(actvalise);
+                                          finish();
+                                      }
+    })
+;}}

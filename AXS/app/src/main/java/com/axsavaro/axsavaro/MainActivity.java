@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView compte;
     private ImageView valise;
+    private ImageView cherche;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,26 @@ public class MainActivity extends AppCompatActivity {
                                           Intent actvalise = new Intent(getApplicationContext(), Main3Activity.class);
                                           startActivity(actvalise);
                                           finish();
+
+
                                       }
-    })
-;}}
+        });
+        this.cherche = (ImageView) findViewById(R.id.cherche);
+
+        cherche.setOnClickListener (new View.OnClickListener(){
+                                    @Override
+                                    public void onClick(View View){
+                                        Intent actcherche = new Intent(getApplicationContext(), Main4Activity.class);
+                                        startActivity(actcherche);
+                                        finish();
+
+
+
+                                    }
+
+
+        });
+
+
+
+    }}

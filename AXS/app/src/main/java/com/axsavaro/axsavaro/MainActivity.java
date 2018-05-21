@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView compte;
     private ImageView valise;
     private ImageView cherche;
+    private ImageView joue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
                                       }
         });
+
+
+
+
         this.cherche = (ImageView) findViewById(R.id.cherche);
 
         cherche.setOnClickListener (new View.OnClickListener(){
@@ -56,6 +61,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+
+
+        this.joue = (ImageView) findViewById(R.id.joue);
+
+        joue.setOnClickListener (new View.OnClickListener(){
+            @Override
+            public void onClick(View View){
+                Intent actjoue = new Intent(getApplicationContext(), Main6Activity.class);
+                startActivity(actjoue);
+                finish();
+
+
+
+            }
+
+
+        });
+
+
 
 
 

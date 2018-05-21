@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main5Activity"
-    android:background="@drawable/tete2">
-
+    tools:context=".Main7Activity"
+    android:background="@drawable/gorge2">
 
     <ImageView
         android:id="@+id/retour"
@@ -18,5 +17,4 @@
         android:src="@drawable/retour"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </android.support.constraint.ConstraintLayout>

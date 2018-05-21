@@ -11,6 +11,7 @@ public class Main4Activity extends AppCompatActivity {
 
     private ImageView retour;
     private ImageView tete;
+    private ImageView gorge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,18 @@ public class Main4Activity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        this.gorge = (ImageView) findViewById(R.id.gorge);
+        gorge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Actgorge = new Intent (getApplicationContext(), Main7Activity.class);
+                startActivity(Actgorge);
+                finish();
+            }
+        });
+
 
 
     }

@@ -1,5 +1,6 @@
 package com.axsavaro.axsavaro;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,9 @@ public class Main4Activity extends AppCompatActivity {
     private ImageView retour;
     private ImageView tete;
     private ImageView gorge;
+    private ImageView piqure;
+    private ImageView ventre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,28 @@ public class Main4Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Actgorge = new Intent (getApplicationContext(), Main7Activity.class);
                 startActivity(Actgorge);
+                finish();
+            }
+        });
+
+
+        this.piqure = (ImageView) findViewById(R.id.piqure);
+        piqure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Actpiqure = new Intent(getApplicationContext(), Main8Activity.class);
+                startActivity(Actpiqure);
+                finish();
+            }
+        });
+
+
+        this.ventre = (ImageView) findViewById(R.id.ventre);
+        ventre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Actventre = new Intent(getApplicationContext(), Main9Activity.class);
+                startActivity(Actventre);
                 finish();
             }
         });

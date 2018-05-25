@@ -2,5 +2,6 @@
     <string name="app_name">Axsavaro</string>
     <string name="bienvenue">Bienvenue sur Axsavaro</string>
     <string name="points">Points : 0</string>
+    <string name="music">play music</string>
 
 </resources>

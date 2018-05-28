@@ -1,0 +1,6 @@
+nom : pel
+prenom : ro
+age : 15
+adresse : ko
+mail : kk
+téléphone : 656454564564

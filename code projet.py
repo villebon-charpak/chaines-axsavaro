@@ -7,13 +7,15 @@ Created on Fri May  4 15:20:25 2018
 # importation des librairies
 
 import datetime
-
+import time
+from datetime import date
 # on déclare les variables
 
 xx = int
 G = int
 reponse_positive = ["oui","ok","o","d'accord","yes","y","ouais"]
 reponse_negative = ["non","n","nope","no"]
+
 
 #------------------------------------------------------------------------------
 #
@@ -95,39 +97,33 @@ if I in reponse_positive:
      traitement = input()
         
      print("quel médicament devez-vous prendre ?")
-     medicament = input()
+     médicament = input()
 
      print("quelle est la date du début de votre traitement ? ")
      print("année ?")
-     x = int(input())
-     année = x
+     année_début = int(input())
      print("mois ?")
-     y = int(input())
-     mois = y
+     mois_début = int(input())
      print("jour ?")
-     z = int(input())
-     jours = z
-     début = datetime.date(x,y,z)
+     jour_début = int(input())
+     début = datetime.date(année_début,mois_début,jour_début)
 
      print("quelle est la date de fin de votre traitement ?")
      print("année ?")
-     a = int(input())
-     année = a
+     année_fin = int(input())
      print("mois ?")
-     b = int(input())
-     mois = b
+     mois_fin = int(input())
      print("jour ?")
-     c = int(input())
-     jours = c
-     fin = datetime.date(a,b,c)
+     jour_fin = int(input())
+     fin = datetime.date(année_fin,mois_fin,jour_fin)
      if fin <= début:
          print("problème, veuillez ressaisir les informations")
      else:    
     
       print("combien de fois devez-vous prendre votre traitement au cours de la journée ?")
-      frequence = int(input())
+      fréquence = int(input())
 
-      if frequence == 0 :
+      if fréquence == 0 :
           print ("problème, veuillez ressaisir les informations, votre date de fin est située avant votre date de départ")
          
       print("voulez-vous saisir un nouveau traitement ?")
@@ -138,12 +134,21 @@ if I in reponse_positive:
           G = 0
       else:
           print("opération inconnue, veuillez recommencer")
-         
+      
+      données_du_traitement = [traitement,médicament,année_début,mois_début,jour_début,année_fin,mois_fin,jour_fin,fréquence,début,fin]
+      données_traitement = []
+      données_traitement += données_du_traitement
          
 else:
     if I in reponse_negative:
         print("Opération terminée") 
     else: 
-        print("Réponse non reconnue")         
+        print("Réponse non reconnue")  
+
+        
+if datetime.datetime.now() in range(début,fin) :
+    print("prenez votre traitement")
+else:
+    print("vous n'avez pas de médicament à prendre")        
     
 #if xx == fin:
